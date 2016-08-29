@@ -52,6 +52,7 @@
     </dependencies>
   </metadata>
   <files>
+    <file src="bin\content\net45\_NotifyPropertyChanged.cs.pp"           target="cs/any" />
     <file src="bin\content\net40\_NotifyPropertyChanged.cs.pp"           target="content/net35/_Blue/MVVM" />
     <file src="bin\content\net40\_NotifyPropertyChanged.cs.pp"           target="content/net40/_Blue/MVVM" />
     <file src="bin\content\net40\_NotifyPropertyChanged.cs.pp"           target="content/sl5/_Blue/MVVM" />
