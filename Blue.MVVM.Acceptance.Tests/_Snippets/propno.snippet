@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <!--View Model Property-->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Blue.MVVM notification property (NET 4.5)</Title>
+      <Shortcut>propno</Shortcut>
+      <Description>Property with change notification, relying on [CallerMemberNameAttribute] to determine property name</Description>
+      <Author>earloc</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>Property Type</ToolTip>
+          <Default>int</Default>
+        </Literal>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Property Name</ToolTip>
+          <Default>MyProperty</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[        public $type$ $name$ {
+                    get {
+                      return _$name$;
+                    }
+                    set {
+                      this.Set(ref _$name$, value);
+                    }
+                  }
+                  private $type$ _$name$ = default($type$);
+                  
+                  $end$
+]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+</CodeSnippets>

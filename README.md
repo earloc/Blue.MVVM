@@ -1,2 +1,2 @@
 # Blue.MVVM
-MVVM - Bareknuckle style
+MVVM<Bareknuckle style>

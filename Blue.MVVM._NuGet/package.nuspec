@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Blue.MVVM</id>
+    <version>2.1.0-pre4</version>
+    <title>Blue.MVVM</title>
+    <authors>earloc</authors>
+    <owners>earloc</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>MVVM, bare knuckle style! Ultra lightweight component suite for Model-View-ViewModel based applications.</summary>
+    <description>
+      MVVM&lt;BareknuckleStyle&gt;
+
+      This package includes a partial class for use in your projects, which should be used as a base class for your notification-enabled class-hierarchy.
+      This way you can extend Blue.MVVM with functionality that may be released in future updates, possibly preventing breaking changes that may be occur between releases.
+      Also, future udates may use the partial class as an extension point.
+    </description>
+    <projectUrl>https://github.com/earloc/Blue.MVVM</projectUrl>
+    <iconUrl>http://oi60.tinypic.com/wl6c7a.jpg</iconUrl>
+    <releaseNotes>
+      2.1.0 - updated dependencies to use Blue.MVVM.Core
+      2.0.0 - added dependency to package Blue.MVVM.Commands
+      1.10.0 - UWP projects reference base class file via NuGet 3.3 conform machanism
+      1.9.0 - added netcore45 (UWP) as target, so that template files are populated coorect. updated dependency to Blue.MVVM.Lib (1.9.1)
+      1.8.0 - removed snippets from package, updated dependency to Blue.MVVM.Lib (1.8.2)
+      1.7.2 - Version alignment
+      1.7.0 - simplified package structure, added NET3.5 and SL5 support
+      1.6.1 - removed dependency to "SolutionSnippets" - if you want to deploy the Solution-Agnostic codesnippets, install "SolutionSnippets" seperatly
+      1.6.0 - remove snippets for argument validation, those are now in Blue.Utils
+      1.5.2 - requires BLue.MVVM.Lib 1.5.1
+      1.5.1 - included snippets for argument validation
+      1.5.0 - normalized content files to common names for the various target-platforms
+      1.4.0 - implemented NotifyPropertyChangedProxy for use in POCO classes, that can´t inherit a common ViewModel baseclass
+      1.3.8 - changed location of content-files to _Blue/MVVM
+      1.3.7 - targeting support for silverlight 5 and windows phone 8.1
+      1.3.6 - moved internal equality-comparison of NotifyPropertyChangedBase to protected AreEqual-Method, so custom logic can be provided. Default implementation uses EqualityComparery&lt;T&gt; instead of Comparer&lt;T&gt;.
+      1.3.5 - version alignment
+      1.2.2 - integrated snippets for notification properties
+      - WindowsSore-apps references NET 4.5 files and snippets
+      1.2.1 - release build
+      1.2.0 - added XML-Comments, changes in raising PropertyChanged-Events according to latest updates in Blue.MVVM.Lib 1.3.2
+      1.1.4 - aligned assembly-versions to package version
+      1.1.3 - update aligning content and structure with sibling-packages
+      1.1.1 - Extracted binaries to Blue.MVVM.Lib, allowing this package to include base class that should be used within your projects
+      1.0.0 - Initial release with implementations of INotifyPropertyChanged and ICommand
+    </releaseNotes>
+    <copyright>Copyright nobody in particular 2014-2016</copyright>
+    <tags>MVVM lightweight simple NotifyPropertyChanged Command</tags>
+    <dependencies>
+      <dependency id="Blue.MVVM.Core"        version="2.0.0-pre4" />
+      <dependency id="Blue.MVVM.Commands"    version="2.1.0-pre3" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\content\net40\_NotifyPropertyChanged.cs.pp"           target="content/net35/_Blue/MVVM" />
+    <file src="bin\content\net40\_NotifyPropertyChanged.cs.pp"           target="content/net40/_Blue/MVVM" />
+    <file src="bin\content\net40\_NotifyPropertyChanged.cs.pp"           target="content/sl5/_Blue/MVVM" />
+    <file src="bin\content\net45\_NotifyPropertyChanged.cs.pp"           target="content/net45/_Blue/MVVM" />
+    <file src="bin\content\net40\_NotifyPropertyChanged.cs.pp"           target="content/portable-net4+netcore45+MonoAndroid1+MonoTouch1+sl5/_Blue/MVVM" />
+    <file src="bin\content\net45\_NotifyPropertyChanged.cs.pp"           target="content/portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10/_Blue/MVVM" />
+  </files>
+</package>
