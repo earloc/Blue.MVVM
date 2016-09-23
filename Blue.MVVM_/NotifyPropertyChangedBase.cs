@@ -64,7 +64,7 @@ namespace Blue.MVVM {
         /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
 
-
+        protected Func<PropertyChangedEventHandler> PropertyChangedHandler => () => PropertyChanged;
     }
 
 
