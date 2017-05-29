@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Blue.MVVM</id>
-    <version>2.2.0-pre02</version>
+    <version>3.0.0</version>
     <title>Blue.MVVM</title>
     <authors>earloc</authors>
     <owners>earloc</owners>
@@ -18,6 +18,7 @@
     <projectUrl>https://github.com/earloc/Blue.MVVM</projectUrl>
     <iconUrl>http://oi60.tinypic.com/wl6c7a.jpg</iconUrl>
     <releaseNotes>
+      3.0.0 - added netstandard1.0
       2.2.0 - NotifyPropertyCHangedBase derived types can utilize NotifyPropertyChangedProxy to gain control over extension-resolution when not deriving from project specific NotifyPropertyChanged via protected Func&lt;PropertyChangedHandler&gt; PropertyCHangedHandler
       2.1.0 - updated dependencies to use Blue.MVVM.Core
       2.0.0 - added dependency to package Blue.MVVM.Commands
@@ -45,11 +46,11 @@
       1.1.1 - Extracted binaries to Blue.MVVM.Lib, allowing this package to include base class that should be used within your projects
       1.0.0 - Initial release with implementations of INotifyPropertyChanged and ICommand
     </releaseNotes>
-    <copyright>Copyright nobody in particular 2014-2016</copyright>
+    <copyright>Copyright nobody in particular 2014-2017</copyright>
     <tags>MVVM lightweight simple NotifyPropertyChanged Command</tags>
     <dependencies>
-      <dependency id="Blue.MVVM.Core"        version="2.2.0-pre01" />
-      <dependency id="Blue.MVVM.Commands"    version="2.1.0-pre3" />
+      <dependency id="Blue.MVVM.Core"        version="3.0.0" />
+      <dependency id="Blue.MVVM.Commands"    version="3.0.0" />
     </dependencies>
   </metadata>
   <files>
@@ -60,5 +61,6 @@
     <file src="bin\content\net45\_NotifyPropertyChanged.cs.pp"           target="content/net45/_Blue/MVVM" />
     <file src="bin\content\net40\_NotifyPropertyChanged.cs.pp"           target="content/portable-net4+netcore45+MonoAndroid1+MonoTouch1+sl5/_Blue/MVVM" />
     <file src="bin\content\net45\_NotifyPropertyChanged.cs.pp"           target="content/portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10/_Blue/MVVM" />
+    <file src="bin\content\net45\_NotifyPropertyChanged.cs.pp"           target="content/netstandard1.0/_Blue/MVVM" />
   </files>
 </package>

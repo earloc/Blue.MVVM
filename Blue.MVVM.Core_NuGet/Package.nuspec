@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Blue.MVVM.Core</id>
-    <version>2.2.0-pre01</version>
+    <version>3.0.0</version>
     <title>Blue.MVVM.Core</title>
     <authors>earloc</authors>
     <owners>earloc</owners>
@@ -17,7 +17,8 @@
     <projectUrl>https://github.com/earloc/Blue.MVVM</projectUrl>
     <iconUrl>http://oi60.tinypic.com/wl6c7a.jpg</iconUrl>
     <releaseNotes>
-      2.2.0 - NotifyPropertyCHangedBase derived types can utilize NotifyPropertyChangedProxy to gain control over extension-resolution when not deriving from project specific NotifyPropertyChanged via protected Func&lt;PropertyChangedHandler&gt; PropertyCHangedHandler
+      3.0.0 - added netstandard1.0
+      2.2.0 - NotifyPropertyChangedBase derived types can utilize NotifyPropertyChangedProxy to gain control over extension-resolution when not deriving from project specific NotifyPropertyChanged via protected Func&lt;PropertyChangedHandler&gt; PropertyCHangedHandler
       2.1.0 - renamed package to Blue.MVVM.Core
       2.0.0 - extracted commands, if you´re not using package Blue.MVVM, install package Blue.MVVM.Commands
       1.10.0 - version alignment
@@ -63,9 +64,10 @@
   <files>
     <file src="bin\lib\net35\Blue.MVVM.dll"        target="lib/net35" />
     <file src="bin\lib\net40\Blue.MVVM.dll"        target="lib/net40" />
-    <file src="bin\lib\sl5\Blue.MVVM.dll"          target="lib/sl5" />
+    <file src="bin\lib\portable40\Blue.MVVM.dll"   target="lib/sl5" />
     <file src="bin\lib\portable40\Blue.MVVM.dll"   target="lib/portable-net40+sl5" />
     <file src="bin\lib\portable45\Blue.MVVM.dll"   target="lib/portable-net45+win+wpa81+wp80+MonoAndroid1+xamarinios10+MonoTouch1+netcore45" />
     <file src="bin\lib\portable45\Blue.MVVM.dll"   target="lib/net45" />
+    <file src="bin\lib\netstandard10\Blue.MVVM.dll"   target="lib/netstandard1.0" />
   </files>     
 </package>

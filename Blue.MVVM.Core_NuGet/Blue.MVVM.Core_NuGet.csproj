@@ -65,43 +65,47 @@
   <ItemGroup>
     <Content Include="..\blue.mvvm.net35\bin\Blue.MVVM.dll">
       <Link>lib\net35\Blue.MVVM.dll</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="..\blue.mvvm.net35\bin\Blue.MVVM.pdb">
       <Link>lib\net35\Blue.MVVM.pdb</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="..\blue.mvvm.net40\bin\Blue.MVVM.dll">
       <Link>lib\net40\Blue.MVVM.dll</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="..\blue.mvvm.net40\bin\Blue.MVVM.pdb">
       <Link>lib\net40\Blue.MVVM.pdb</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="..\blue.mvvm.portable40\bin\Blue.MVVM.dll">
       <Link>lib\portable40\Blue.MVVM.dll</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="..\blue.mvvm.portable40\bin\Blue.MVVM.pdb">
       <Link>lib\portable40\Blue.MVVM.pdb</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="..\blue.mvvm.portable45\bin\Blue.MVVM.dll">
       <Link>lib\portable45\Blue.MVVM.dll</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="..\blue.mvvm.portable45\bin\Blue.MVVM.pdb">
       <Link>lib\portable45\Blue.MVVM.pdb</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="..\blue.mvvm.sl5\bin\Blue.MVVM.dll">
-      <Link>lib\sl5\Blue.MVVM.dll</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <Content Include="..\Blue.MVVM.Standard10\bin\netstandard1.0\Blue.MVVM.dll">
+      <Link>lib\netstandard10\Blue.MVVM.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="..\blue.mvvm.sl5\bin\Blue.MVVM.pdb">
-      <Link>lib\sl5\Blue.MVVM.pdb</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <Content Include="..\Blue.MVVM.Standard10\bin\netstandard1.0\Blue.MVVM.pdb">
+      <Link>lib\netstandard10\Blue.MVVM.pdb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Blue.MVVM.Standard10\bin\netstandard1.0\Blue.MVVM.xml">
+      <Link>lib\netstandard10\Blue.MVVM.xml</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
