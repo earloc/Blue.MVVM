@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Blue.MVVM.Core</id>
-    <version>3.0.0</version>
+    <version>3.0.1</version>
     <title>Blue.MVVM.Core</title>
     <authors>earloc</authors>
     <owners>earloc</owners>
@@ -54,7 +54,7 @@
       1.1.3 - adding Blue.MVVM.Lib to projects that target .NET 4.5 now references the 4.5 assemblies instead of 4.0 assemblies
       1.1.1 - Separated Blue.MVVM and Blue.MVVM.Lib
     </releaseNotes>
-    <copyright>Copyright nobody in particular 2014-2016</copyright>
+    <copyright>Copyright nobody in particular 2014-2017</copyright>
     <tags>MVVM lightweight simple NotifyPropertyChanged Command ViewModel</tags>
 
     <frameworkAssemblies>
@@ -62,12 +62,12 @@
     </frameworkAssemblies>
   </metadata>
   <files>
-    <file src="bin\lib\net35\Blue.MVVM.dll"        target="lib/net35" />
-    <file src="bin\lib\net40\Blue.MVVM.dll"        target="lib/net40" />
-    <file src="bin\lib\portable40\Blue.MVVM.dll"   target="lib/sl5" />
-    <file src="bin\lib\portable40\Blue.MVVM.dll"   target="lib/portable-net40+sl5" />
-    <file src="bin\lib\portable45\Blue.MVVM.dll"   target="lib/portable-net45+win+wpa81+wp80+MonoAndroid1+xamarinios10+MonoTouch1+netcore45" />
-    <file src="bin\lib\portable45\Blue.MVVM.dll"   target="lib/net45" />
-    <file src="bin\lib\netstandard10\Blue.MVVM.dll"   target="lib/netstandard1.0" />
+    <file src="bin\lib\net35\Blue.MVVM.dll"        target="lib\net35" />
+    <file src="bin\lib\net40\Blue.MVVM.dll"        target="lib\net40" />
+    <file src="bin\lib\portable40\Blue.MVVM.dll"   target="lib\sl5" />
+    <file src="bin\lib\portable40\Blue.MVVM.dll"   target="lib\portable-net40+sl5" />
+    <file src="bin\lib\portable45\Blue.MVVM.dll"   target="lib\portable-net45+win+wpa81+wp80+MonoAndroid1+xamarinios10+MonoTouch1+netcore45" />
+    <file src="bin\lib\portable45\Blue.MVVM.dll"   target="lib\net45" />
+    <file src="bin\lib\netstandard10\Blue.MVVM.dll"   target="lib\netstandard1.0" />
   </files>     
 </package>

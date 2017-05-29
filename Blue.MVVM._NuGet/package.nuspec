@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Blue.MVVM</id>
-    <version>3.0.0</version>
+    <version>3.0.2</version>
     <title>Blue.MVVM</title>
     <authors>earloc</authors>
     <owners>earloc</owners>
@@ -49,18 +49,18 @@
     <copyright>Copyright nobody in particular 2014-2017</copyright>
     <tags>MVVM lightweight simple NotifyPropertyChanged Command</tags>
     <dependencies>
-      <dependency id="Blue.MVVM.Core"        version="3.0.0" />
+      <dependency id="Blue.MVVM.Core"        version="3.0.1" />
       <dependency id="Blue.MVVM.Commands"    version="3.0.0" />
     </dependencies>
   </metadata>
   <files>
-    <file src="bin\content\net45\_NotifyPropertyChanged.cs.pp"           target="cs/any" />
-    <file src="bin\content\net40\_NotifyPropertyChanged.cs.pp"           target="content/net35/_Blue/MVVM" />
-    <file src="bin\content\net40\_NotifyPropertyChanged.cs.pp"           target="content/net40/_Blue/MVVM" />
-    <file src="bin\content\net40\_NotifyPropertyChanged.cs.pp"           target="content/sl5/_Blue/MVVM" />
-    <file src="bin\content\net45\_NotifyPropertyChanged.cs.pp"           target="content/net45/_Blue/MVVM" />
-    <file src="bin\content\net40\_NotifyPropertyChanged.cs.pp"           target="content/portable-net4+netcore45+MonoAndroid1+MonoTouch1+sl5/_Blue/MVVM" />
-    <file src="bin\content\net45\_NotifyPropertyChanged.cs.pp"           target="content/portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10/_Blue/MVVM" />
-    <file src="bin\content\net45\_NotifyPropertyChanged.cs.pp"           target="content/netstandard1.0/_Blue/MVVM" />
+    <file src="bin\content\net45\_NotifyPropertyChanged.cs.pp"           target="content\any" />
+    <file src="bin\content\net40\_NotifyPropertyChanged.cs.pp"           target="content\net35\_Blue\MVVM" />
+    <file src="bin\content\net40\_NotifyPropertyChanged.cs.pp"           target="content\net40\_Blue\MVVM" />
+    <file src="bin\content\net40\_NotifyPropertyChanged.cs.pp"           target="content\sl5\_Blue\MVVM" />
+    <file src="bin\content\net45\_NotifyPropertyChanged.cs.pp"           target="content\net45\_Blue\MVVM" />
+    <file src="bin\content\net40\_NotifyPropertyChanged.cs.pp"           target="content\portable-net4+netcore45+MonoAndroid1+MonoTouch1+sl5\_Blue\MVVM" />
+    <file src="bin\content\net45\_NotifyPropertyChanged.cs.pp"           target="content\portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10\_Blue\MVVM" />
+    <file src="bin\content\net45\_NotifyPropertyChanged.cs.pp"           target="content\netstandard1.0\_Blue\MVVM" />
   </files>
 </package>
