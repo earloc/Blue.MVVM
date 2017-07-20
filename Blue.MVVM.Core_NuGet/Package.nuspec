@@ -59,7 +59,7 @@
     <tags>MVVM lightweight simple NotifyPropertyChanged Command ViewModel</tags>
 
     <dependencies>
-      <group targetFramework="netstandard1.0">
+      <group targetFramework="netstandard">
         <dependency id="System.ComponentModel" version="4.3.0" />
       </group>
     </dependencies>
