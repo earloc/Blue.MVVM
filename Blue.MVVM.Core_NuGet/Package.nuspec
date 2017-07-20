@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Blue.MVVM.Core</id>
-    <version>3.0.2</version>
+    <version>3.0.4</version>
     <title>Blue.MVVM.Core</title>
     <authors>earloc</authors>
     <owners>earloc</owners>
@@ -17,6 +17,8 @@
     <projectUrl>https://github.com/earloc/Blue.MVVM</projectUrl>
     <iconUrl>http://oi60.tinypic.com/wl6c7a.jpg</iconUrl>
     <releaseNotes>
+      3.0.4 - fixed unsigned netstandard1.0 assembly
+      3.0.3 - added MonoAndroid403, xamarinios10, MonoTouch1 explicit targeting
       3.0.2 - fixed netstandard1.0 assembly contains no types
       3.0.0 - added netstandard1.0
       2.2.0 - NotifyPropertyChangedBase derived types can utilize NotifyPropertyChangedProxy to gain control over extension-resolution when not deriving from project specific NotifyPropertyChanged via protected Func&lt;PropertyChangedHandler&gt; PropertyCHangedHandler
@@ -77,6 +79,9 @@
     <file src="bin\lib\portable40\Blue.MVVM.dll"   target="lib\portable-net40+sl5" />
     <file src="bin\lib\portable45\Blue.MVVM.dll"   target="lib\portable-net45+win+wpa81+wp80+MonoAndroid1+xamarinios10+MonoTouch1+netcore45" />
     <file src="bin\lib\portable45\Blue.MVVM.dll"   target="lib\net45" />
+    <file src="bin\lib\portable45\Blue.MVVM.dll"   target="lib\MonoAndroid403" />
+    <file src="bin\lib\portable45\Blue.MVVM.dll"   target="lib\xamarinios10" />
+    <file src="bin\lib\portable45\Blue.MVVM.dll"   target="lib\MonoTouch1" />
     <file src="bin\lib\netstandard10\Blue.MVVM.dll"   target="lib\netstandard1.0" />
   </files>     
 </package>

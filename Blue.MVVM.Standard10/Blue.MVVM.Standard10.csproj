@@ -9,6 +9,8 @@
     <Version>3.0.0</Version>
     <Authors>earloc@live.de</Authors>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>C:\working\git\eSc\Blue.MVVM\Blue.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
@@ -22,6 +24,10 @@
   </PropertyGroup>
 
   <Import Project="..\Blue.MVVM_\Blue.MVVM_.projitems" Label="Shared" />
+
+  <ItemGroup>
+    <None Include="..\Blue.snk" Link="Blue.snk" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="System.ComponentModel" Version="4.3.0" />
