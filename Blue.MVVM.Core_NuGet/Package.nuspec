@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Blue.MVVM.Core</id>
-    <version>3.0.1</version>
+    <version>3.0.2</version>
     <title>Blue.MVVM.Core</title>
     <authors>earloc</authors>
     <owners>earloc</owners>
@@ -17,6 +17,7 @@
     <projectUrl>https://github.com/earloc/Blue.MVVM</projectUrl>
     <iconUrl>http://oi60.tinypic.com/wl6c7a.jpg</iconUrl>
     <releaseNotes>
+      3.0.2 - fixed netstandard1.0 assembly contains no types
       3.0.0 - added netstandard1.0
       2.2.0 - NotifyPropertyChangedBase derived types can utilize NotifyPropertyChangedProxy to gain control over extension-resolution when not deriving from project specific NotifyPropertyChanged via protected Func&lt;PropertyChangedHandler&gt; PropertyCHangedHandler
       2.1.0 - renamed package to Blue.MVVM.Core
@@ -57,9 +58,17 @@
     <copyright>Copyright nobody in particular 2014-2017</copyright>
     <tags>MVVM lightweight simple NotifyPropertyChanged Command ViewModel</tags>
 
+    <dependencies>
+      <group targetFramework="netstandard1.0">
+        <dependency id="System.ComponentModel" version="4.3.0" />
+      </group>
+    </dependencies>
+    
     <frameworkAssemblies>
       <frameworkAssembly assemblyName="PresentationCore" targetFramework="net40" />
     </frameworkAssemblies>
+
+   
   </metadata>
   <files>
     <file src="bin\lib\net35\Blue.MVVM.dll"        target="lib\net35" />
