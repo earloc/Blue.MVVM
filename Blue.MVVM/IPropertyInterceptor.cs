@@ -12,12 +12,12 @@ namespace Blue.MVVM {
         /// <summary>
         /// occurs before a property is set
         /// </summary>
-        event EventHandler<PropertySettingEventArgs>    PreSet;
+        event EventHandler<PropertySettingEventArgs> PreSet;
 
         /// <summary>
         /// occurs after a property has been set
         /// </summary>
-        event EventHandler<PropertySetEventArgs>        PostSet;
+        event EventHandler<PropertySetEventArgs> PostSet;
 
     }
 }

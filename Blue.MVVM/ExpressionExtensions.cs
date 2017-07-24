@@ -3,12 +3,10 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Text;
 
-namespace Blue.MVVM
-{
-    public static class ExpressionExtensions
-    {
+namespace Blue.MVVM {
+    public static class ExpressionExtensions {
 
-        public static string ExtractMemberName<T> (this Expression<Func<T>> expression) {
+        public static string ExtractMemberName<T>(this Expression<Func<T>> expression) {
             MemberExpression memberExpression = null;
             var unary = expression.Body as UnaryExpression;
             if (unary != null) {
