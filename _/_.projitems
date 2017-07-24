@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>9726db3e-1583-4340-8af2-690181945ed9</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>_</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="C:\working\git\eSc\Blue.MVVM\Blue.MVVM\Properties\Blue.snk" />
+  </ItemGroup>
+</Project>

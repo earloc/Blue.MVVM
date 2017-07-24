@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Blue.MVVM.Acceptance.Tests {
-    internal class BlueVM : NotifyPropertyChanged {
+    internal class BlueVM : Blue.MVVM.NotifyPropertyChanged {
 
         public int IntProperty45 {
             get {

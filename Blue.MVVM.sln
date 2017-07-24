@@ -7,9 +7,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blue.MVVM.Acceptance.Tests"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blue.MVVM.Tests", "Blue.MVVM.Tests\Blue.MVVM.Tests.csproj", "{B51ABED2-FFEC-4266-A27F-3568FEB9851C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blue.MVVM", "Blue.MVVM\Blue.MVVM.csproj", "{DD860C9B-E14C-4FA2-A61E-0C9743575A87}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blue.MVVM", "Blue.MVVM\Blue.MVVM.csproj", "{DD860C9B-E14C-4FA2-A61E-0C9743575A87}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "_", "_\_.shproj", "{9726DB3E-1583-4340-8AF2-690181945ED9}"
 EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		_\_.projitems*{9726db3e-1583-4340-8af2-690181945ed9}*SharedItemsImports = 13
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|ARM = Debug|ARM
