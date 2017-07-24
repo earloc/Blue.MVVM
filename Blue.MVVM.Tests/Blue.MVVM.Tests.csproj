@@ -41,7 +41,7 @@
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>..\_\Blue.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>..\Blue.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Blue.Utils.ArgumentValidation, Version=1.2.0.0, Culture=neutral, PublicKeyToken=1bb1db17d606db59, processorArchitecture=MSIL">
@@ -74,9 +74,6 @@
     <Compile Include="System\RaiseTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\_\Blue.snk">
-      <Link>Properties\Blue.snk</Link>
-    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

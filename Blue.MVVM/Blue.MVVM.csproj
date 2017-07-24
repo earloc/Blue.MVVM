@@ -46,7 +46,7 @@ higly extensible, yet lightweight implementation of INotifyProeprtyChanged
 1.1.1 - Extracted binaries to Blue.MVVM.Lib, allowing this package to include base class that should be used within your projects
 1.0.0 - Initial release with implementations of INotifyPropertyChanged and ICommand</PackageReleaseNotes>
     <SignAssembly>True</SignAssembly>
-    <AssemblyOriginatorKeyFile>C:\working\git\eSc\Blue.MVVM\_\Blue.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>..\Blue.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -54,9 +54,5 @@ higly extensible, yet lightweight implementation of INotifyProeprtyChanged
   </PropertyGroup>
 
   <Import Project="..\_\_.projitems" Label="Shared" />
-
-  <ItemGroup>
-    <None Include="..\_\Blue.snk" Link="Blue.snk" />
-  </ItemGroup>
 
 </Project>
