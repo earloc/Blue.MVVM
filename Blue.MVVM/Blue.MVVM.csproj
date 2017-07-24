@@ -53,6 +53,4 @@ higly extensible, yet lightweight implementation of INotifyProeprtyChanged
     <WarningLevel>0</WarningLevel>
   </PropertyGroup>
 
-  <Import Project="..\_\_.projitems" Label="Shared" />
-
 </Project>
