@@ -1,11 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <VersionPrefix>4.0.0</VersionPrefix>
     <TargetFramework>netstandard1.0</TargetFramework>
-    <Version>4.0.0</Version>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
     <Description>MVVM&lt;BareknuckleStyle&gt;
-higly extensible, yet lightweight implementation of INotifyProeprtyChanged
+higly extensible, yet lightweight implementation of INotifyPropprtyChanged
 </Description>
     <Authors>Alexander Clare</Authors>
     <Company>eSc</Company>
