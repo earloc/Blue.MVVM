@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.0</TargetFramework>
+    <Version>4.0.0-pre03</Version>
+    <Description>MVVM&amp;lt;BareKnuckleStyle&amp;gt; - IServiceProvider extensions</Description>
+    <Product>Blue.MVVM</Product>
+    <Company>eSc</Company>
+    <Authors>Alexander Clare</Authors>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <AssemblyVersion>4.0.0.0</AssemblyVersion>
+    <FileVersion>4.0.0.0</FileVersion>
+    <Copyright>Copyright 2014 - 2017 @ Alexander Clare</Copyright>
+    <PackageProjectUrl>https://github.com/earloc/Blue.MVVM</PackageProjectUrl>
+    <PackageIconUrl>http://oi60.tinypic.com/wl6c7a.jpg</PackageIconUrl>
+    <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
+    <RepositoryUrl>https://github.com/earloc/Blue.MVVM</RepositoryUrl>
+    <PackageReleaseNotes>4.0.0 - Moving forward - dropped support for net20/35/40, sl4/5, wp(a)7/8
+1.0.0 - Added netstandard10, StreamLined API !Breaking Changes!
+0.5.0 - Added extensions
+0.4.2 - updated compatible profiles
+0.4.1 - moved extensions to expected namespace
+0.4.0 - renamed method
+0.3.2 - added more PCL-Profiles
+0.3.1 - configuration-Parameters in ResolveAsync-Extensions are now optional
+0.3.0 - removed class constraint for T of ITypeResolver.ResolveAsync&amp;lt;T&amp;gt;(Type)
+0.2.0 - renamed IoC to ITypeResolver to better reflect it´s designated purpose
+      - Extensions now in Blue.MVVM.Extensions
+0.1.0 - initial release</PackageReleaseNotes>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\Blue.snk</AssemblyOriginatorKeyFile>
+    <PackageTags>Blue MVVM IoC Inversion of Control DI Depndency Injection IServiceProvider Extensions</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.ComponentModel" Version="4.3.0" />
+  </ItemGroup>
+
+</Project>

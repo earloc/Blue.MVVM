@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.0</TargetFramework>
+    <Version>4.0.0-pre01</Version>
+    <Authors>Alexander Clare</Authors>
+    <Company>eSc</Company>
+    <Product>Blue.MVVM</Product>
+    <Description>MVVM&amp;lt;BareKnuckleStyle&amp;gt;  - ICommand implementations</Description>
+    <Copyright>Copyright 2014 - 2017 @ Alexander Clare</Copyright>
+    <PackageLicenseUrl>http://opensource.org/licenses/MIT</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/earloc/Blue.MVVM</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/earloc/Blue.MVVM</RepositoryUrl>
+    <PackageIconUrl>http://oi60.tinypic.com/wl6c7a.jpg</PackageIconUrl>
+    <PackageReleaseNotes>- 4.0.0 - moving forward - dropped support for net35/45, sl4/5, wp(a)7/8
+- 3.0.1 - fixed unsigned netstandard1.0 assembly
+- 3.0.0 - added support for netstandard1.0
+- 2.1.0 - added explicit assemblies for .NET 3.0 and 4.0
+- 2.0.1 - added NET20, ICommand&amp;lt;T&amp;gt; and INotificationCommand&amp;lt;T&amp;gt;
+- 2.0.0 - initial extraction out of Blue.MVVM</PackageReleaseNotes>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\Blue.snk</AssemblyOriginatorKeyFile>
+    <PackageTags>Blue MVVM Command Command&lt;T&gt; ICommand ICommand&lt;T&gt;</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\Blue.snk" Link="Blue.snk" />
+  </ItemGroup>
+
+</Project>
