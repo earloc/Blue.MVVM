@@ -21,7 +21,6 @@ namespace Blue.MVVM.Navigation {
         Task PushAsync<TViewModel>(Func<TViewModel, Task> asyncInitializer)
             where TViewModel : class
         ;
-
         Task PushAsync<TViewModel>(TViewModel viewModel = null)
             where TViewModel : class
         ;
