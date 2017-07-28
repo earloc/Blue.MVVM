@@ -27,7 +27,7 @@ namespace Blue.MVVM.Navigation {
             await NavigateAsync(source, target, popAction);
         }
 
-        public Task PushAsync<TViewModel>(Action<TViewModel> initializer)
+        public Task<TViewModel> PushAsync<TViewModel>(Action<TViewModel> initializer)
             where TViewModel : class {
             if (initializer == null)
                 throw new ArgumentNullException(nameof(initializer), "must not be null");
@@ -38,7 +38,7 @@ namespace Blue.MVVM.Navigation {
             });
         }
 
-        public Task PushAsync<TViewModel>(Func<TViewModel, Task> asyncInitializer)
+        public Task<TViewModel> PushAsync<TViewModel>(Func<TViewModel, Task> asyncInitializer)
            where TViewModel : class {
             if (asyncInitializer == null)
                 throw new ArgumentNullException(nameof(asyncInitializer), "must not be null");
@@ -46,18 +46,18 @@ namespace Blue.MVVM.Navigation {
             return PushAsyncCore(null, asyncInitializer);
         }
 
-        public Task PushAsync<TViewModel>(TViewModel viewModel = null)
+        public Task<TViewModel> PushAsync<TViewModel>(TViewModel viewModel = null)
             where TViewModel : class {
             return PushAsyncCore(viewModel, null);
         }
 
-        public abstract Task PushAsync<TViewModel>(TViewModel viewModel, TView view)
+        public abstract Task<TViewModel> PushAsync<TViewModel>(TViewModel viewModel, TView view)
             where TViewModel : class
         ;
-        private Task PushAsyncCore<TViewModel>(TViewModel maybeNullViewModel, Func<TViewModel, Task> asyncInitializer)
+        private Task<TViewModel> PushAsyncCore<TViewModel>(TViewModel maybeNullViewModel, Func<TViewModel, Task> asyncInitializer)
             where TViewModel : class => InvokePushAsync(maybeNullViewModel, asyncInitializer, _NavigationStack, (vm, v) => PushAsync(vm, v));
 
-        public Task PushModalAsync<TViewModel>(Action<TViewModel> initializer) where TViewModel : class {
+        public Task<TViewModel> PushModalAsync<TViewModel>(Action<TViewModel> initializer) where TViewModel : class {
             if (initializer == null)
                 throw new ArgumentNullException(nameof(initializer), "must not be null");
 
@@ -67,21 +67,21 @@ namespace Blue.MVVM.Navigation {
             });
         }
 
-        public Task PushModalAsync<TViewModel>(Func<TViewModel, Task> asyncInitializer) where TViewModel : class {
+        public Task<TViewModel> PushModalAsync<TViewModel>(Func<TViewModel, Task> asyncInitializer) where TViewModel : class {
             if (asyncInitializer == null)
                 throw new ArgumentNullException(nameof(asyncInitializer), "must not be null");
 
             return PushModalAsyncCore(null, asyncInitializer);
         }
 
-        public Task PushModalAsync<TViewModel>(TViewModel viewModel = null) where TViewModel : class {
+        public Task<TViewModel> PushModalAsync<TViewModel>(TViewModel viewModel = null) where TViewModel : class {
             return PushModalAsyncCore(viewModel, (Func<TViewModel, Task>)null);
         }
 
-        private Task PushModalAsyncCore<TViewModel>(TViewModel maybeNullViewModel, Func<TViewModel, Task> asyncInitializer)
+        private Task<TViewModel> PushModalAsyncCore<TViewModel>(TViewModel maybeNullViewModel, Func<TViewModel, Task> asyncInitializer)
             where TViewModel : class => InvokePushAsync(maybeNullViewModel, asyncInitializer, _ModalStack, (vm, v) => PushModalAsync(vm, v));
 
-        private async Task InvokePushAsync<TViewModel>(TViewModel maybeNullViewModel, Func<TViewModel, Task> asyncInitializer, Stack<object> stack, Func<TViewModel, TView, Task> pushAction)
+        private async Task<TViewModel> InvokePushAsync<TViewModel>(TViewModel maybeNullViewModel, Func<TViewModel, Task> asyncInitializer, Stack<object> stack, Func<TViewModel, TView, Task> pushAction)
             where TViewModel : class {
             var target = maybeNullViewModel ?? await ResolveViewModelAsync<TViewModel>();
 
@@ -93,6 +93,7 @@ namespace Blue.MVVM.Navigation {
             var source = stack.Peek();
             await NavigateAsync(source, target, () => pushAction(target, view));
             stack.Push(target);
+            return target;
         }
 
         private static async Task NavigateAsync(object source, object target, Func<Task> pushOrPop) {
@@ -113,7 +114,7 @@ namespace Blue.MVVM.Navigation {
             await navigatedFromSource.TryNotifyNavigatingFrom(sourceEventArgs);
         }
 
-        public abstract Task PushModalAsync<TViewModel>(TViewModel viewModel, TView view)
+        public abstract Task<TViewModel> PushModalAsync<TViewModel>(TViewModel viewModel, TView view)
             where TViewModel : class
         ;
         protected abstract Task<TViewModel> ResolveViewModelAsync<TViewModel>()
