@@ -4,7 +4,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Blue.MVVM.Navigation.Notifications {
-    public interface INotifyNavigatingTo {
-        void OnNavigatingTo(NavigateToEventArgs e);
+    public interface INotifyPreviewNavigateTo {
+        void OnPreviewNavigateTo(NavigateToEventArgs e);
     }
 }

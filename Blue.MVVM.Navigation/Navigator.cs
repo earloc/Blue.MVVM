@@ -10,20 +10,21 @@ namespace Blue.MVVM.Navigation {
 
         private readonly Stack<object> _NavigationStack = new Stack<object>();
         private readonly Stack<object> _ModalStack = new Stack<object>();
+        private readonly NavigationManager _NavigationManager = new NavigationManager();
+
         public Task PopAsync() => InvokePopAsync(_NavigationStack, () => PopAsyncCore());
         
         protected abstract Task PopAsyncCore();
 
         public Task PopModalAsync() => InvokePopAsync(_ModalStack, () => PopModalAsyncCore());
         
-
         protected abstract Task PopModalAsyncCore();
 
         public async Task InvokePopAsync(Stack<object> stack, Func<Task> popAction) {
-            var source = stack.Peek();
-            var target = stack.Pop();
+            var source = stack.Count > 0 ? stack.Pop() : null;
+            var target = stack.Count > 0 ? stack.Peek() : null;
 
-            await NavigateAsync(source, target, popAction);
+            await _NavigationManager.NavigateAsync(source, target, popAction);
         }
 
         public Task<TViewModel> PushAsync<TViewModel>(Action<TViewModel> initializer)
@@ -90,27 +91,9 @@ namespace Blue.MVVM.Navigation {
             var view = await ResolveViewAsync(target);
 
             var source = stack.Count > 0 ? stack.Peek() : null;
-            await NavigateAsync(source, target, () => pushAction(target, view));
+            await _NavigationManager.NavigateAsync(source, target, () => pushAction(target, view));
             stack.Push(target);
             return target;
-        }
-
-        private static async Task NavigateAsync(object source, object target, Func<Task> pushOrPop) {
-            var sourceEventArgs = new NavigateFromEventArgs(target);
-            var navigatingFromSource = source as INotifyNavigatingFrom;
-            var navigatedFromSource = source as INotifyNavigatingFrom;
-
-            var targetEventArgs = new NavigateToEventArgs(source);
-            var navigatingToTarget = target as INotifyNavigatingTo;
-            var navigatedToTarget = target as INotifyNavigatedTo;
-
-            navigatingFromSource?.OnNavigatedFrom(sourceEventArgs);
-            navigatingToTarget?.OnNavigatingTo(targetEventArgs);
-
-            await pushOrPop();
-
-            navigatedToTarget?.OnNavigatedTo(targetEventArgs);
-            navigatedFromSource?.OnNavigatedFrom(sourceEventArgs);
         }
 
         public abstract Task<TViewModel> PushModalAsync<TViewModel>(TViewModel viewModel, TView view)
