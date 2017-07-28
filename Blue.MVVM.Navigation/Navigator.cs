@@ -75,7 +75,7 @@ namespace Blue.MVVM.Navigation {
         }
 
         public Task PushModalAsync<TViewModel>(TViewModel viewModel = null) where TViewModel : class {
-            return PushModalAsyncCore(viewModel, null);
+            return PushModalAsyncCore(viewModel, (Func<TViewModel, Task>)null);
         }
 
         private Task PushModalAsyncCore<TViewModel>(TViewModel maybeNullViewModel, Func<TViewModel, Task> asyncInitializer)
@@ -109,8 +109,8 @@ namespace Blue.MVVM.Navigation {
 
             await pushOrPop();
 
-            await navigatedFromSource.TryNotifyNavigatingFrom(sourceEventArgs);
             await navigatedToTarget.TryINotifyNavigatedTo(targetEventArgs);
+            await navigatedFromSource.TryNotifyNavigatingFrom(sourceEventArgs);
         }
 
         public abstract Task PushModalAsync<TViewModel>(TViewModel viewModel, TView view)
