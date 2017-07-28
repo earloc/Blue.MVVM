@@ -16,22 +16,15 @@ namespace Blue.MVVM.Navigation {
 
         public IViewTypeResolver ViewTypeResolver { get; }
 
-
-        protected override Task PushAsyncCore<TViewModel>(TViewModel maybeNullViewModel, Func<TViewModel, Task> asyncInitializer) {
-            return InvokeAsyncCore(maybeNullViewModel, asyncInitializer, (vm, v) => PushAsync(vm, v));
+        protected override Task<TViewModel> ResolveViewModelAsync<TViewModel>() {
+            return ServiceProvider.GetAsync<TViewModel>();
         }
 
-        protected override Task PushModalAsyncCore<TViewModel>(TViewModel maybeNullViewModel, Func<TViewModel, Task> asyncInitializer) {
-            return InvokeAsyncCore(maybeNullViewModel, asyncInitializer, (vm, v) => PushModalAsync(vm, v));
-        }
-        private async Task InvokeAsyncCore<TViewModel>(TViewModel maybeNullViewModel, Func<TViewModel, Task> asyncInitializer, Func<TViewModel, TView, Task> targetInvocation)
-            where TViewModel : class {
-            var viewModel = maybeNullViewModel ?? await ServiceProvider.GetAsync(asyncInitializer);
-
+        protected override async Task<TView> ResolveViewAsync<TViewModel>(TViewModel viewModel) {
             var viewType = await ViewTypeResolver.GetViewTypeAsync(typeof(TViewModel), viewModel);
             var view = await ServiceProvider.GetAsAsync<TView>(viewType);
 
-            await targetInvocation(viewModel, view);
+            return view;
         }
     }
 }
