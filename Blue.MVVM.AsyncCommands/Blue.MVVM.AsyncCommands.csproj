@@ -19,7 +19,7 @@
     <Authors>Alexander Clare</Authors>
     <Company>eSc</Company>
     <Product>Blue.MVVM</Product>
-    <Description>MVVM&amp;lt;BareKnuckleStyle&amp;gt; - async ICommand implementations</Description>
+    <Description>MVVM&lt;BareKnuckleStyle&gt; - async ICommand implementations</Description>
     <PackageProjectUrl>https://github.com/earloc/Blue.MVVM</PackageProjectUrl>
     <PackageIconUrl>http://oi60.tinypic.com/wl6c7a.jpg</PackageIconUrl>
     <PackageLicenseUrl>http://opensource.org/licenses/MIT</PackageLicenseUrl>

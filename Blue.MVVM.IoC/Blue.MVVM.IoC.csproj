@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard1.0</TargetFramework>
     <Version>4.0.0-pre03</Version>
-    <Description>MVVM&amp;lt;BareKnuckleStyle&amp;gt; - IServiceProvider extensions</Description>
+    <Description>MVVM&lt;;BareKnuckleStyle&gt; - IServiceProvider extensions</Description>
     <Product>Blue.MVVM</Product>
     <Company>eSc</Company>
     <Authors>Alexander Clare</Authors>

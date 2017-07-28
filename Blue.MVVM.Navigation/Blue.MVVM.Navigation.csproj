@@ -2,11 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.0</TargetFramework>
-    <Version>4.0.0-pre16</Version>
+    <Version>4.0.0-pre18</Version>
     <Authors>Alexander Clare</Authors>
     <Company>eSc</Company>
     <Product>Blue.MVVM</Product>
-    <Description>MVVM&amp;lt;BareKnuckleStyle&amp;gt;  - Navigation infrastructure</Description>
+    <Description>MVVM&lt;BareKnuckleStyle&gt; - Navigation infrastructure</Description>
     <Copyright>Copyright 2014 - 2017 @ Alexander Clare</Copyright>
     <PackageLicenseUrl>http://opensource.org/licenses/MIT</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/earloc/Blue.MVVM</PackageProjectUrl>

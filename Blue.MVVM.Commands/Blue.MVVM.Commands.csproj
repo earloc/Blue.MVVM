@@ -6,7 +6,7 @@
     <Authors>Alexander Clare</Authors>
     <Company>eSc</Company>
     <Product>Blue.MVVM</Product>
-    <Description>MVVM&amp;lt;BareKnuckleStyle&amp;gt;  - ICommand implementations</Description>
+    <Description>MVVM&lt;BareKnuckleStyle&gt;  - ICommand implementations</Description>
     <Copyright>Copyright 2014 - 2017 @ Alexander Clare</Copyright>
     <PackageLicenseUrl>http://opensource.org/licenses/MIT</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/earloc/Blue.MVVM</PackageProjectUrl>
