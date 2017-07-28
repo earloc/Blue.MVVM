@@ -105,13 +105,13 @@ namespace Blue.MVVM.Navigation {
             var navigatingToTarget = target as INotifyNavigatingTo;
             var navigatedToTarget = target as INotifyNavigatedTo;
 
-            await navigatingFromSource.TryNotifyNavigatingFrom(sourceEventArgs);
-            await navigatingToTarget.TryNotifyNavigatingTo(targetEventArgs);
+            navigatingFromSource?.OnNavigatedFrom(sourceEventArgs);
+            navigatingToTarget?.OnNavigatingTo(targetEventArgs);
 
             await pushOrPop();
 
-            await navigatedToTarget.TryINotifyNavigatedTo(targetEventArgs);
-            await navigatedFromSource.TryNotifyNavigatingFrom(sourceEventArgs);
+            navigatedToTarget?.OnNavigatedTo(targetEventArgs);
+            navigatedFromSource?.OnNavigatedFrom(sourceEventArgs);
         }
 
         public abstract Task<TViewModel> PushModalAsync<TViewModel>(TViewModel viewModel, TView view)
