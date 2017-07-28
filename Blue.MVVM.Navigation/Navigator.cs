@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
-using System.Linq;
 using Blue.MVVM.Navigation.Notifications;
 
 namespace Blue.MVVM.Navigation {
@@ -21,8 +20,8 @@ namespace Blue.MVVM.Navigation {
         protected abstract Task PopModalAsyncCore();
 
         public async Task InvokePopAsync(Stack<object> stack, Func<Task> popAction) {
-            var source = stack.Pop();
-            var target = stack.Peek();
+            var source = stack.Peek();
+            var target = stack.Pop();
 
             await NavigateAsync(source, target, popAction);
         }
@@ -90,7 +89,7 @@ namespace Blue.MVVM.Navigation {
 
             var view = await ResolveViewAsync(target);
 
-            var source = stack.Peek();
+            var source = stack.Count > 0 ? stack.Peek() : null;
             await NavigateAsync(source, target, () => pushAction(target, view));
             stack.Push(target);
             return target;
