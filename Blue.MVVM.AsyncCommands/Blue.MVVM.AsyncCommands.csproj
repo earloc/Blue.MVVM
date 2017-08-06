@@ -2,7 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.0</TargetFramework>
-    <PackageReleaseNotes>4.0.0 - moving forward - dropped support for net35/40, sl4/5, wp(a)7/8
+    <PackageReleaseNotes>4.0.1 - fix CommandParameter of AsyncEventArgs is always default(T)
+4.0.0 - moving forward - dropped support for net35/40, sl4/5, wp(a)7/8
 3.0.4 - fixed unsigned netstandard1.0 assembly
 - added xamarinios10, MonoTouch1 explicit target frameworks
 3.0.3 - updated all package references to signed Blue.MVVM.Commands assembly
@@ -15,7 +16,7 @@
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
     <FileVersion>4.0.0.0</FileVersion>
     <PackageId>Blue.MVVM.AsyncCommands</PackageId>
-    <Version>4.0.0-pre01</Version>
+    <Version>4.0.1-pre01</Version>
     <Authors>Alexander Clare</Authors>
     <Company>eSc</Company>
     <Product>Blue.MVVM</Product>

@@ -35,7 +35,7 @@ namespace Blue.MVVM.Commands {
         }
 
         public AsyncEventArgs(T commandParameter) {
-            CommandParameter = CommandParameter;
+            CommandParameter = commandParameter;
         }
 
         public T CommandParameter { get; }

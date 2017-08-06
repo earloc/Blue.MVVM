@@ -8,9 +8,7 @@ namespace Blue.MVVM.Commands {
 
 
         public AsyncCommand(Func<T, Task> execute, Func<T, bool> canExecute = null) {
-            if (execute == null)
-                throw new ArgumentNullException(nameof(execute), "must not be null");
-            _Execute = execute;
+            _Execute = execute ?? throw new ArgumentNullException(nameof(execute), "must not be null");
             _CanExecute = canExecute;
 
         }
