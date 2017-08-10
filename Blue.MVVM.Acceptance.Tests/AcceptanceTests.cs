@@ -55,7 +55,7 @@ namespace Blue.MVVM.Acceptance.Tests {
             var count           = 0;
             var actual          = Measure.ExecutionTimeFactor( () => blueVM.IntProperty45 = count++, () => competitorVM.IntProperty40 = count++);
 
-            var minimumFactor   = 8;
+            var minimumFactor   = 5;
 
             Assert.IsTrue(actual.IsFasterBy(minimumFactor), (string.Format("[{0}] is not faster than [{1}] by factor [{2}]", actual.MinExecutionTimeFaster, actual.MinExecutionTimeSlower, minimumFactor)));
         }
