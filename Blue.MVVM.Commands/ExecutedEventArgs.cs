@@ -1,7 +1,7 @@
 ﻿using System.Text;
 using System.Threading;
 
-namespace Blue.MVVM {
+namespace Blue.MVVM.Commands {
 
     public class ExecutedEventArgs<TIn, TOut> : ExecutingEventArgs<TIn> {
         public ExecutedEventArgs(TIn parameter, TOut result) 

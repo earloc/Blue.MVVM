@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading;
 
-namespace Blue.MVVM {
+namespace Blue.MVVM.Commands {
     internal class SlimLock {
 
         private class Disposer : IDisposable {

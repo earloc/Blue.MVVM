@@ -4,7 +4,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace Blue.MVVM {
+namespace Blue.MVVM.Commands {
     public interface ICommand<TIn, TOut> : ICommand<TIn> {
         Task<TOut> ExecuteAsync(TIn parameter);
     }

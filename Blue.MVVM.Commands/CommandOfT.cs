@@ -4,7 +4,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace Blue.MVVM {
+namespace Blue.MVVM.Commands {
     /// <summary>
     /// generic command implementation for passing the execution logic as <see cref="Action"/> / <see cref="Func{T}"/>s
     /// </summary>
@@ -13,10 +13,6 @@ namespace Blue.MVVM {
 
         private readonly Func<TIn, Task<TOut>> _ExecuteAsync;
         private readonly Func<TIn, bool> _CanExecute;
-
-        //public Command(Func<TIn, Task<TOut>> executeAsync, Func<bool> canExecute = null)
-        //    : this(executeAsync, AsParameterizedAction(canExecute)) {
-        //}
 
         public Command(Func<TIn, Task<TOut>> executeAsync, Func<TIn, bool> canExecute = null) {
             _ExecuteAsync = executeAsync ?? throw new ArgumentNullException(nameof(executeAsync), "must not be null");

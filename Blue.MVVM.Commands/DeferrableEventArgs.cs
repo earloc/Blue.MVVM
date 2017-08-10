@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Blue.MVVM {
+namespace Blue.MVVM.Commands {
     public class DeferrableEventArgs<T> : EventArgs {
 
         private class Deferral : IDisposable {
@@ -29,7 +29,7 @@ namespace Blue.MVVM {
 
         private List<Task> _RequestedDeferrals = new List<Task>();
 
-        public IDisposable RequestDeferral () {
+        public IDisposable RequestDeferral() {
             var disposable = new Deferral();
             _RequestedDeferrals.Add(disposable.Task);
             return disposable;
@@ -37,6 +37,6 @@ namespace Blue.MVVM {
 
         public IEnumerable<Task> PendingDeferrals => _RequestedDeferrals.ToArray();
 
-        
+
     }
 }
