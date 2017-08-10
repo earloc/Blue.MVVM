@@ -63,11 +63,11 @@ namespace Blue.MVVM {
         }
 
 
-        public bool Set<T>(ref T target, T newValue, Expression<Func<T>> propertyExpression) {
+        public new bool Set<T>(ref T target, T newValue, Expression<Func<T>> propertyExpression) {
             return base.Set<T>(ref target, newValue, propertyExpression);
         }
 
-        public bool Set<T>(ref T target, T newValue, [CallerMemberName]string propertyName = "") {
+        public new bool Set<T>(ref T target, T newValue, [CallerMemberName]string propertyName = "") {
             return base.Set<T>(ref target, newValue, propertyName);
         }
     }
