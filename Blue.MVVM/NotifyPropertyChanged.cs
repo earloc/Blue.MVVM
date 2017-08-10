@@ -26,18 +26,6 @@ namespace Blue.MVVM {
             OnPropertyChanged(e.PropertyName);
         }
 
-        ///// <summary>
-        ///// returns true, if the corresponding EqualityComparer determines equality, otherwise false <see cref="EqualityComparer&lt;T&gt;"/>
-        ///// maybe overridden when custom logic for determining equality is needed
-        ///// </summary>
-        ///// <typeparam name="T"></typeparam>
-        ///// <param name="oldValue">the old value that will be overwritten</param>
-        ///// <param name="newValue">the new value to be set</param>
-        ///// <returns></returns>
-        //protected virtual bool AreEqual<T> (T oldValue, T newValue) {
-        //    return EqualityComparer<T>.Default.Equals(oldValue, newValue);
-        //}
-
         /// <summary>
         /// raises the <see cref="PropertyChanged"/> event.
         /// </summary>
