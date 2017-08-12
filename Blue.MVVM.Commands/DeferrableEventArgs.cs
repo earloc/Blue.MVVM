@@ -5,37 +5,15 @@ using System.Threading.Tasks;
 namespace Blue.MVVM.Commands {
     public class DeferrableEventArgs<T> : EventArgs {
 
-        private class Deferral : IDisposable {
-
-            private TaskCompletionSource<bool> _Source = new TaskCompletionSource<bool>();
-
-            public Task Task => _Source.Task;
-
-            public void Dispose() {
-                Dispose(true);
-            }
-
-            private bool _Disposed;
-            public void Dispose(bool disposing) {
-                if (_Disposed)
-                    return;
-
-                _Disposed = true;
-
-                if (disposing)
-                    _Source.SetResult(true);
-            }
-        }
-
-        private List<Task> _RequestedDeferrals = new List<Task>();
-
         public IDisposable RequestDeferral() {
-            var disposable = new Deferral();
-            _RequestedDeferrals.Add(disposable.Task);
+            var deferral = new TaskCompletionSource<bool>();
+            var disposable = new Dispaction(() => deferral.SetResult(true));
+            _RequestedDeferrals.Add(deferral.Task);
             return disposable;
         }
 
         public IEnumerable<Task> PendingDeferrals => _RequestedDeferrals.ToArray();
+        private List<Task> _RequestedDeferrals = new List<Task>();
 
 
     }

@@ -5,10 +5,8 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace Blue.MVVM.Commands {
-    /// <summary>
-    /// non generic command implementation for passing the execution logic as <see cref="Action"/> / <see cref="System.Func{T}"/>s
-    /// </summary>
-    public class Command : Command<object, object> {
+
+    public class Command<TIn> : Function<TIn, object> {
         public Command(Action execute, Func<bool> canExecute = null)
             : base(AsAsyncFunc(execute), AsParameterized(canExecute)) {
         }
@@ -17,11 +15,28 @@ namespace Blue.MVVM.Commands {
             : base(AsAsyncFuncOfT(executeAsync), AsParameterized(canExecute)) {
         }
 
-        private static Func<object, Task<object>> AsAsyncFuncOfT(Func<Task> executeAsync) {
+        public new Task ExecuteAsync(TIn p) {
+            return base.ExecuteAsync(p);
+        }
+
+        protected static Func<TIn, Task<object>> AsAsyncFuncOfT(Func<Task> executeAsync) {
             return async p => {
                 await executeAsync();
                 return null;
             };
+        }
+    }
+
+    /// <summary>
+    /// non generic command implementation for passing the execution logic as <see cref="Action"/> / <see cref="System.Func{T}"/>s
+    /// </summary>
+    public class Command : Command<object> {
+        public Command(Action execute, Func<bool> canExecute = null)
+            : base(execute, canExecute) {
+        }
+
+        public Command(Func<Task> executeAsync, Func<bool> canExecute = null)
+            : base(executeAsync, canExecute) {
         }
 
         public static bool BlockRecursionByDefault { get; set; } = true;

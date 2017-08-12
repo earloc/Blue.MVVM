@@ -10,7 +10,7 @@ namespace Blue.MVVM.Commands.Tests {
         [TestMethod]
         [TestCategory("TDD")]
         public async Task ExecuteAsyncReturnsDefaultOfTWhenCanExecuteReturnsFalse_SyncExecute() {
-            var command = new Command<object, bool>(p => Task.FromResult(true), p => false);
+            var command = new Function<object, bool>(p => Task.FromResult(true), p => false);
 
             var actual = await command.ExecuteAsync(null);
 
@@ -20,7 +20,7 @@ namespace Blue.MVVM.Commands.Tests {
         [TestMethod]
         [TestCategory("TDD")]
         public async Task ExecuteAsyncReturnsResultWHenCanExecuteIsTrue_SyncExecute() {
-            var command = new Command<object, bool>(p => Task.FromResult(true), p => true);
+            var command = new Function<object, bool>(p => Task.FromResult(true), p => true);
 
             var actual = await command.ExecuteAsync(null);
 
@@ -30,7 +30,7 @@ namespace Blue.MVVM.Commands.Tests {
         [TestMethod]
         [TestCategory("TDD")]
         public async Task ExecuteAsyncReturnsResultWHenCanExecuteIsTrue_AsyncExecute() {
-            var command = new Command<object, bool>(p => Task.FromResult(true), p => true);
+            var command = new Function<object, bool>(p => Task.FromResult(true), p => true);
 
             var actual = await command.ExecuteAsync(null);
 
@@ -40,7 +40,7 @@ namespace Blue.MVVM.Commands.Tests {
         [TestMethod]
         [TestCategory("TDD")]
         public async Task ExecuteAsyncReturnsDefaultOfTWhenCanExecuteReturnsFalse_AsyncExecute() {
-            var command = new Command<object, bool>(async p => await Task.FromResult(true), p => false);
+            var command = new Function<object, bool>(async p => await Task.FromResult(true), p => false);
 
             var actual = await command.ExecuteAsync(null);
 
@@ -178,7 +178,7 @@ namespace Blue.MVVM.Commands.Tests {
 
             var returnValue = DateTime.Now;
 
-            var command = new Command<object, DateTime>((p) => Task.FromResult(returnValue));
+            var command = new Function<object, DateTime>((p) => Task.FromResult(returnValue));
 
             var actual = DateTime.MinValue;
 

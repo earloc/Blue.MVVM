@@ -5,16 +5,13 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace Blue.MVVM.Commands {
-    /// <summary>
-    /// generic command implementation for passing the execution logic as <see cref="Action"/> / <see cref="Func{T}"/>s
-    /// </summary>
-    /// <typeparam name="T"></typeparam>
-    public class Command<TIn, TOut> : ICommand<TIn, TOut> {
+
+    public class Function<TIn, TOut> : ICommand<TIn, TOut> {
 
         private readonly Func<TIn, Task<TOut>> _ExecuteAsync;
         private readonly Func<TIn, bool> _CanExecute;
 
-        public Command(Func<TIn, Task<TOut>> executeAsync, Func<TIn, bool> canExecute = null) {
+        public Function(Func<TIn, Task<TOut>> executeAsync, Func<TIn, bool> canExecute = null) {
             _ExecuteAsync = executeAsync ?? throw new ArgumentNullException(nameof(executeAsync), "must not be null");
             _CanExecute = canExecute;
 
@@ -35,7 +32,6 @@ namespace Blue.MVVM.Commands {
             };
         }
 
-
         protected static Func<TIn, bool> AsParameterized(Func<bool> canExecute) {
             if (canExecute == null)
                 return null;
@@ -48,21 +44,31 @@ namespace Blue.MVVM.Commands {
             return CanExecute(p);
         }
 
+        public virtual bool CanExecute(TIn parameter) {
+            if (_RecursionGuard.ShouldBlock)
+                return false;
+
+            if (_CanExecute == null)
+                return true;
+            return _CanExecute(parameter);
+
+        }
+
         async void System.Windows.Input.ICommand.Execute(object parameter) {
             var p = EnsureParameter(parameter);
             await ExecuteAsync(p);
         }
 
-        private TIn EnsureParameter(object parameter) {
-            if (parameter == null)
+        private TIn EnsureParameter(object untyped) {
+            if (untyped == null)
                 return default(TIn);
 
             try {
-                return (TIn)parameter;
+                return (TIn)untyped;
             }
             catch (InvalidCastException ex) {
                 var expected = typeof(TIn);
-                var actual = parameter.GetType();
+                var actual = untyped.GetType();
 
                 throw new InvalidCastException($"expected parameter of type '{expected.FullName}', but was '{actual.FullName}'", ex);
             }
@@ -97,23 +103,12 @@ namespace Blue.MVVM.Commands {
             await Task.WhenAll(e.PendingDeferrals);
         }
 
-
         public bool BlocksRecursions {
             get { return _RecursionGuard.IsEnabled; }
             set { _RecursionGuard.IsEnabled = value; }
         }
 
         private readonly SlimLock _RecursionGuard = new SlimLock();
-
-        public virtual bool CanExecute(TIn parameter) {
-            if (_RecursionGuard.ShouldBlock)
-                return false;
-
-            if (_CanExecute == null)
-                return true;
-            return _CanExecute(parameter);
-
-        }
 
         public void NotifyCanExecuteChanged() => OnCanExecuteChanged();
         protected void OnCanExecuteChanged() => CanExecuteChanged?.Invoke(this, EventArgs.Empty);
@@ -124,6 +119,5 @@ namespace Blue.MVVM.Commands {
 
         protected void OnExecuted(ExecutedEventArgs<TIn, TOut> e) => Executed?.Invoke(this, e);
         public event EventHandler<ExecutedEventArgs<TIn, TOut>> Executed;
-
     }
 }

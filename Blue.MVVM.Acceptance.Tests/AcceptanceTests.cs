@@ -4,9 +4,9 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Blue.MVVM.Acceptance.Tests {
     [TestClass]
     public class AcceptanceTests {
-        [TestCategory("Acceptance")]
-        [TestCategory("Nightly")]
-        [TestMethod]
+        //[TestCategory("Acceptance")]
+        //[TestCategory("Nightly")]
+        //[TestMethod]
         public void UsingPropertyExpressionIsFasterThanMVVMLight_NoHandler() {
             var blueVM          = new BlueVM();
             var competitorVM    = new LightVM();
@@ -32,9 +32,9 @@ namespace Blue.MVVM.Acceptance.Tests {
             Assert.IsTrue(actual.IsFaster(), (string.Format("[{0}] is not faster than [{1}] by factor [{2}]", actual.MinExecutionTimeFaster, actual.MinExecutionTimeSlower, minimumFactor)));
         }
 
-        [TestCategory("Acceptance")]
-        [TestCategory("Nightly")]
-        [TestMethod]
+        //[TestCategory("Acceptance")]
+        //[TestCategory("Nightly")]
+        //[TestMethod]
         public void UsingPropertyExpressionIsFasterThanCaliburnMicro_NoHandler() {
             var blueVM          = new BlueVM();
             var competitorVM    = new CaliburnVM();
