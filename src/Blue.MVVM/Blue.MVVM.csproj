@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.0</TargetFramework>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Description>MVVM&lt;BareknuckleStyle&gt;
 higly extensible, yet lightweight implementation of INotifyPropprtyChanged
 </Description>

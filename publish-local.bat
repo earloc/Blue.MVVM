@@ -1,1 +1,1 @@
-dotnet publish -o c:\working\packages
+dotnet publish src -o c:\working\packages
