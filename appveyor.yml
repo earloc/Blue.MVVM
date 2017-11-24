@@ -2,7 +2,7 @@ version: {build}-{branch}
 image: Visual Studio 2017
 configuration: Release
 build_script:
-- ps: .\Build.ps1
+- ps: ./Build
 artifacts:
 - path: '**/*.nuspec'
   name: nuspecs
