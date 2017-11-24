@@ -16,7 +16,7 @@ namespace Blue.MVVM.AsyncCommands.Tests {
         [TestMethod]
         public async Task ExecutingAsyncCarriesEnumerationCommandParameterInEventArgs() {
 
-            var command = new Command<TestEnum>(() => { });
+            var command = new Command<TestEnum>((x) => Task.FromResult(true));
 
             var expected = TestEnum.B;
             var actual = TestEnum.A;
