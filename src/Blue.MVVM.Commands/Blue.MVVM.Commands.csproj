@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.0</TargetFramework>
-    <Version>5.0.0-pre05</Version>
+    <Version>5.0</Version>
     <Authors>Alexander Clare</Authors>
     <Company>eSc</Company>
     <Product>Blue.MVVM</Product>
@@ -19,7 +19,7 @@
 - 2.1.0 - added explicit assemblies for .NET 3.0 and 4.0
 - 2.0.1 - added NET20, ICommand&amp;lt;T&amp;gt; and INotificationCommand&amp;lt;T&amp;gt;
 - 2.0.0 - initial extraction out of Blue.MVVM</PackageReleaseNotes>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <SignAssembly>True</SignAssembly>
     <AssemblyOriginatorKeyFile>..\Blue.snk</AssemblyOriginatorKeyFile>
     <PackageTags>Blue MVVM Command Command&lt;T&gt; ICommand ICommand&lt;T&gt;</PackageTags>

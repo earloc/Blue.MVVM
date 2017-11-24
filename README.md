@@ -1,25 +1,38 @@
-# MVVM&lt;Bareknuckle style&gt;
-![Build-Status](https://eastsidecrew.visualstudio.com/_apis/public/build/definitions/473b1658-0dfc-43c3-8912-845017418cd5/2/badge)
 
-ultra-leightweight, 
-flexible, 
-extensible,
-versatile,
-yet scalable utilitybelt for MVVM-based applications
+# MVVM&lt;BareKnuckleStyle&gt;
 
-featuring some really cool and never been seen approaches for common problems
+an
+
+- ultra-leightweight,
+- flexible,
+- extensible,
+- versatile,
+- yet scalable utilitybelt
+ 
+for MVVM-based applications, featuring some really cool and never been seen approaches for common problems.
 
 Most of the below described packages can be mixed-and-matched independently in any app, regardless of the perhaps existing MVVM-Framework
 
+##### master-branch
+[![Build status (master)](https://ci.appveyor.com/api/projects/status/ef83fo2jh7onio60/branch/master?svg=true)](https://ci.appveyor.com/project/earloc/blue-mvvm/branch/master)
+
+##### dev-branch
+[![Build status (dev)](https://ci.appveyor.com/api/projects/status/ef83fo2jh7onio60/branch/dev?svg=true)](https://ci.appveyor.com/project/earloc/blue-mvvm/branch/dev)
+
 ## Blue.MVVM
+[NuGet](https://www.nuget.org/packages/Blue.MVVM/)
+
 
 ## Blue.MVVM.Commands
+[NuGet](https://www.nuget.org/packages/Blue.MVVM.Commands/)
 
 ## Blue.MVVM.IoC
+[NuGet](https://www.nuget.org/packages/Blue.MVVM.IoC/)
 
 ## Blue.MVVM.Navigation
+[NuGet](https://www.nuget.org/packages/Blue.MVVM.Navigation/)
 
-# Why another MVVM framework
+# Why another MVVM framework ???
 
 Blue.MVVM is not a framework. It is a set of common needed types supporting MVVM-based applications.
 
