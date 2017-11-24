@@ -1,8 +1,10 @@
-# MVVM&lt;Bareknuckle style&gt;
-![Build-Status](https://eastsidecrew.visualstudio.com/_apis/public/build/definitions/473b1658-0dfc-43c3-8912-845017418cd5/2/badge)
 
-ultra-leightweight, 
-flexible, 
+# MVVM&lt;Bareknuckle style&gt;
+
+[![Build status](https://ci.appveyor.com/api/projects/status/ef83fo2jh7onio60?svg=true)](https://ci.appveyor.com/project/earloc/blue-mvvm)
+
+ultra-leightweight,
+flexible,
 extensible,
 versatile,
 yet scalable utilitybelt for MVVM-based applications
