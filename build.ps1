@@ -21,7 +21,7 @@ foreach ($project in $projects) {
     [xml]$xml = Get-Content $projectFile
     $version = Select-Xml "//Version" $xml | ForEach-Object {$_.Node.'#text'}
 
-    $patchedVersion = "$version$buildNumber"
+    $patchedVersion = "$version.$buildNumber"
     $packageVersion = "$patchedVersion$packageSuffix"
 
     Write-Host "Building $project with version $patchedVersion"

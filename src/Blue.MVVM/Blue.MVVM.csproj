@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
+    <Version>4.0</Version>
     <TargetFramework>netstandard1.0</TargetFramework>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <Description>MVVM&lt;BareknuckleStyle&gt;
@@ -46,11 +46,8 @@ higly extensible, yet lightweight implementation of INotifyPropprtyChanged
 1.0.0 - Initial release with implementations of INotifyPropertyChanged and ICommand</PackageReleaseNotes>
     <SignAssembly>True</SignAssembly>
     <AssemblyOriginatorKeyFile>..\Blue.snk</AssemblyOriginatorKeyFile>
-    <Version>4.0.2017001</Version>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <WarningLevel>0</WarningLevel>
   </PropertyGroup>
-
 </Project>

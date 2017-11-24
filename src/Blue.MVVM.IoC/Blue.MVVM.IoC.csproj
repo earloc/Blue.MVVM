@@ -2,14 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.0</TargetFramework>
-    <Version>4.0.2017001</Version>
+    <Version>4.0</Version>
     <Description>MVVM&lt;;BareKnuckleStyle&gt; - IServiceProvider extensions</Description>
     <Product>Blue.MVVM</Product>
     <Company>eSc</Company>
     <Authors>Alexander Clare</Authors>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <AssemblyVersion>4.0.0.0</AssemblyVersion>
-    <FileVersion>4.0.0.0</FileVersion>
     <Copyright>Copyright 2014 - 2017 @ Alexander Clare</Copyright>
     <PackageProjectUrl>https://github.com/earloc/Blue.MVVM</PackageProjectUrl>
     <PackageIconUrl>http://oi60.tinypic.com/wl6c7a.jpg</PackageIconUrl>
