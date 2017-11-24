@@ -46,7 +46,7 @@ higly extensible, yet lightweight implementation of INotifyPropprtyChanged
 1.0.0 - Initial release with implementations of INotifyPropertyChanged and ICommand</PackageReleaseNotes>
     <SignAssembly>True</SignAssembly>
     <AssemblyOriginatorKeyFile>..\Blue.snk</AssemblyOriginatorKeyFile>
-    <Version>4.0</Version>
+    <Version>4.0.2017001</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
