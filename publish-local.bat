@@ -1,1 +1,0 @@
-dotnet publish src -o c:\working\packages
