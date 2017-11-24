@@ -1,7 +1,7 @@
 param (
     [Parameter(Mandatory=$true)]
-    [int]$buildNumber = $env.APPVEYOR_BUILD_NUMBER,
-    [string]$packageSuffix = $env.APPVEYOR_REPO_BRANCH
+    [int]$buildNumber,
+    [string]$packageSuffix
 )
 
 if ($packageSuffix -eq 'master') {
