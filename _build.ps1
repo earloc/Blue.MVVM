@@ -39,7 +39,7 @@ Function BuildAndPack() {
     Write-Host "-------------------------------------------------------"
     Write-Host "packing $project with package version $packageVersion"
     Write-Host "-------------------------------------------------------"
-    dotnet pack  $projectFile /p:Version=$packageVersion
+    dotnet pack  $projectFile /p:Version=$packageVersion /p:Configuration=Release
 }
 
 Function PatchVersion() {
