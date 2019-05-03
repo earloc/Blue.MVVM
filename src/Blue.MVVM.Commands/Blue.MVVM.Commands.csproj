@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.0</TargetFramework>
-    <Version>5.0</Version>
+    <Version>5.1</Version>
     <Authors>Alexander Clare</Authors>
     <Company>eSc</Company>
     <Product>Blue.MVVM</Product>
@@ -12,7 +12,8 @@
     <PackageProjectUrl>https://github.com/earloc/Blue.MVVM</PackageProjectUrl>
     <RepositoryUrl>https://github.com/earloc/Blue.MVVM</RepositoryUrl>
     <PackageIconUrl>http://oi60.tinypic.com/wl6c7a.jpg</PackageIconUrl>
-    <PackageReleaseNotes>- 5.0.0 - async first, commands with result and async-aware events
+    <PackageReleaseNotes>- 5.1.0 - introduce base class FunctionBase&amp;lt;TIn, TOut&amp;gt; for use by inheritance-style commands
+- 5.0.0 - async first, commands with result and async-aware events
 - 4.0.0 - moving forward - dropped support for net35/45, sl4/5, wp(a)7/8
 - 3.0.1 - fixed unsigned netstandard1.0 assembly
 - 3.0.0 - added support for netstandard1.0
