@@ -93,7 +93,7 @@ namespace Blue.MVVM.Commands
             }
         }
 
-        internal abstract Task<TOut> OnExecuteAsync(TIn parameter);
+        protected abstract Task<TOut> OnExecuteAsync(TIn parameter);
 
         private Task<TOut> RecursionBlockedResult => Task.FromResult(default(TOut));
 

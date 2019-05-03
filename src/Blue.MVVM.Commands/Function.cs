@@ -24,6 +24,6 @@ namespace Blue.MVVM.Commands
             return _CanExecute(parameter);
         }
 
-        internal override Task<TOut> OnExecuteAsync(TIn parameter) => _ExecuteAsync(parameter);
+        protected override Task<TOut> OnExecuteAsync(TIn parameter) => _ExecuteAsync(parameter);
     }
 }
