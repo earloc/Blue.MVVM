@@ -31,15 +31,15 @@ Function BuildAndPack() {
     $packageVersion = $patchedVersion.Package
     
 
-    Write-Host "-------------------------------------------------------"
-    Write-Host "Building $project with version $assemblyVersion"
-    Write-Host "-------------------------------------------------------"
-    dotnet build $projectFile /p:Version=$assemblyVersion
+    # Write-Host "-------------------------------------------------------"
+    # Write-Host "Building $project with version $assemblyVersion"
+    # Write-Host "-------------------------------------------------------"
+    # dotnet build $projectFile /p:Version=$assemblyVersion
 
     Write-Host "-------------------------------------------------------"
     Write-Host "packing $project with package version $packageVersion"
     Write-Host "-------------------------------------------------------"
-    dotnet pack  $projectFile /p:Version=$packageVersion --no-build
+    dotnet pack  $projectFile /p:Version=$packageVersion
 }
 
 Function PatchVersion() {
